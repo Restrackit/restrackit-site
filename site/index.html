@@ -19,7 +19,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preload" as="image" href="/img/report-ispezione.webp" imagesrcset="/img/report-ispezione-800.webp 800w, /img/report-ispezione.webp 1560w" imagesizes="(max-width: 900px) 100vw, 540px" fetchpriority="high">
+<link rel="preload" as="image" href="/img/report-ispezione-1160.webp" imagesrcset="/img/report-ispezione-800.webp 800w, /img/report-ispezione-1160.webp 1160w, /img/report-ispezione-2320.webp 2320w" imagesizes="(max-width: 1192px) calc(100vw - 32px), 1160px" fetchpriority="high">
 <link rel="stylesheet" href="/styles.css">
 <script type="application/ld+json">
 {
@@ -53,9 +53,9 @@
     {
       "@type": "FAQPage",
       "mainEntity": [
-        { "@type": "Question", "name": "Cos'è Restrackit?", "acceptedAnswer": { "@type": "Answer", "text": "Restrackit è un software HACCP per cucine professionali, composto da un'app Android e da una piattaforma web. Serve a registrare lotti e scadenze, stampare etichette HACCP e avere i dati pronti per un'ispezione." } },
+        { "@type": "Question", "name": "Cos'è Restrackit?", "acceptedAnswer": { "@type": "Answer", "text": "Restrackit è un software HACCP per cucine professionali, composto da un'app Android per tablet e da una piattaforma web. Serve a registrare lotti e scadenze, stampare etichette HACCP e avere i dati pronti per un'ispezione." } },
         { "@type": "Question", "name": "Funziona per chi gestisce più locali?", "acceptedAnswer": { "@type": "Answer", "text": "Sì. Ogni locale ha i propri dati, separati dagli altri, e dall'app si passa da un locale all'altro con un selettore." } },
-        { "@type": "Question", "name": "Su quali dispositivi funziona?", "acceptedAnswer": { "@type": "Answer", "text": "Su smartphone e tablet Android e da browser. In cucina si usa l'app; i controlli si possono fare anche dalla piattaforma web." } },
+        { "@type": "Question", "name": "Su quali dispositivi funziona?", "acceptedAnswer": { "@type": "Answer", "text": "Su tablet Android: l'app è pensata per il tablet della cucina, usato in orizzontale. Funziona anche su smartphone Android, e i controlli si possono fare dalla piattaforma web." } },
         { "@type": "Question", "name": "Come funziona la lettura delle etichette con l'AI?", "acceptedAnswer": { "@type": "Answer", "text": "Si inquadra l'etichetta del fornitore e l'app propone prodotto, lotto e scadenza. L'operatore controlla e conferma: nessun dato viene salvato senza conferma." } },
         { "@type": "Question", "name": "Serve una stampante?", "acceptedAnswer": { "@type": "Answer", "text": "Serve solo per stampare le etichette HACCP. Durante il pilota la stampante è fornita in comodato d'uso." } },
         { "@type": "Question", "name": "A cosa servono i badge NFC?", "acceptedAnswer": { "@type": "Answer", "text": "Sul tablet condiviso della cucina ogni operatore passa al proprio profilo avvicinando il badge, oppure con un PIN. Così ogni registrazione è attribuita a chi l'ha fatta, senza digitare password in servizio." } },
@@ -85,9 +85,9 @@
 <main>
   <section class="hero">
     <div class="wrap">
-      <div>
+      <div class="hero-copy">
         <h1>Software HACCP per cucine professionali, veloce quanto il servizio</h1>
-        <p class="lead">Lotti, scadenze ed etichette in 1-2 tap. Ogni locale con i propri dati, tutti nella stessa app.</p>
+        <p class="lead">Lotti, scadenze ed etichette in 1-2 tap, dal tablet della cucina. Ogni locale con i propri dati, tutti nella stessa app.</p>
         <p class="pilot-note">Stiamo selezionando 5 cucine pilota: un mese gratis, stampante e formazione incluse.</p>
         <div class="actions">
           <a class="btn btn-primary" href="https://forms.gle/BkNGwGhaoGwES6xX8" target="_blank" rel="noopener">Candidati al pilota</a>
@@ -95,7 +95,7 @@
         </div>
       </div>
       <figure>
-        <img class="shot" src="/img/report-ispezione.webp" srcset="/img/report-ispezione-800.webp 800w, /img/report-ispezione.webp 1560w" sizes="(max-width: 900px) 100vw, 540px" width="1560" height="812" fetchpriority="high"
+        <img class="shot" src="/img/report-ispezione-1160.webp" srcset="/img/report-ispezione-800.webp 800w, /img/report-ispezione-1160.webp 1160w, /img/report-ispezione-2320.webp 2320w" sizes="(max-width: 1192px) calc(100vw - 32px), 1160px" width="2320" height="1038" fetchpriority="high"
              alt="Prima pagina di un report ispezione generato da Restrackit: lotti in giacenza con scadenza, TMC, allergeni e movimenti.">
         <figcaption>Il report per l'ispezione, generato dall'app (dati di esempio).</figcaption>
       </figure>
@@ -134,20 +134,26 @@
       <h2>Come funziona</h2>
       <p class="muted">Il percorso di un lotto, dall'arrivo della merce all'ispezione.</p>
       <div class="steps">
-        <div class="step">
-          <!-- TODO: sostituire con uno screenshot reale dell'app (lettura etichetta o nuovo lotto), es. /img/passo-lotto.webp -->
-          <div class="card-preview" role="img" aria-label="Esempio di scheda lotto: panna fresca, lotto LOT-20260927-PANNA-FRES-011, scadenza 28/09/2026, allergeni latte.">
-            <div class="lot">
-              <h3 class="m0">panna fresca</h3>
-              <dl>
-                <dt>Lotto</dt><dd>LOT-20260927-PANNA-FRES-011</dd>
-                <dt>Scadenza</dt><dd>28/09/2026</dd>
-                <dt>Allergeni</dt><dd>latte</dd>
-              </dl>
+        <div class="step step-lead">
+          <!-- TODO: screenshot reale dal tablet in orizzontale (nuovo lotto o revisione dopo la lettura dell'etichetta),
+               PNG 16:10, es. 2560x1600. Sostituire il div .card-preview con:
+               <img src="/img/passo-lotto-1160.webp" srcset="..." width="2560" height="1600" loading="lazy" alt="..."> -->
+          <div class="tablet">
+            <div class="card-preview" role="img" aria-label="Esempio di scheda lotto: panna fresca, lotto LOT-20260927-PANNA-FRES-011, scadenza 28/09/2026, allergeni latte.">
+              <div class="lot">
+                <h3 class="m0">panna fresca</h3>
+                <dl>
+                  <dt>Lotto</dt><dd>LOT-20260927-PANNA-FRES-011</dd>
+                  <dt>Scadenza</dt><dd>28/09/2026</dd>
+                  <dt>Allergeni</dt><dd>latte</dd>
+                </dl>
+              </div>
             </div>
           </div>
-          <h3>Registra il lotto all'arrivo</h3>
-          <p>Inquadri l'etichetta del fornitore: l'AI legge lotto e scadenza, tu confermi con un tap. L'operatore si identifica con il badge NFC.</p>
+          <div>
+            <h3>Registra il lotto all'arrivo</h3>
+            <p>Inquadri l'etichetta del fornitore con il tablet della cucina: l'AI legge lotto e scadenza, tu confermi con un tap. L'operatore si identifica con il badge NFC.</p>
+          </div>
         </div>
         <div class="step">
           <!-- TODO: sostituire con la foto di un'etichetta HACCP stampata, es. /img/passo-etichetta.webp -->
@@ -163,16 +169,16 @@
           <h3>Prepara ed etichetta</h3>
           <p>Per ogni preparazione l'app registra i lotti usati e calcola il TMC, il termine minimo di conservazione. L'etichetta HACCP esce dalla stampante già compilata.</p>
         </div>
-        <div class="step step-wide">
-          <div>
-            <h3 class="m0">Arriva l'ispezione? Sei già pronto.</h3>
-            <p>Le notifiche ti avvisano prima che un lotto scada. Quando serve, il report PDF raccoglie lotti, scadenze, allergeni e movimenti del periodo.</p>
+        <div class="step">
+          <div class="card-preview">
+            <ul class="status">
+              <li><span>pane tostato</span><span class="tag bad">Scaduto</span></li>
+              <li><span>latte intero</span><span class="tag warn">In scadenza</span></li>
+              <li><span>farina 00</span><span class="tag ok">In regola</span></li>
+            </ul>
           </div>
-          <ul class="status">
-            <li><span>pane tostato</span><span class="tag bad">Scaduto</span></li>
-            <li><span>latte intero</span><span class="tag warn">In scadenza</span></li>
-            <li><span>farina 00</span><span class="tag ok">In regola</span></li>
-          </ul>
+          <h3>Arriva l'ispezione? Sei già pronto.</h3>
+          <p>Le notifiche ti avvisano prima che un lotto scada. Quando serve, il report PDF raccoglie lotti, scadenze, allergeni e movimenti del periodo.</p>
         </div>
       </div>
     </div>
@@ -246,9 +252,9 @@
   <section id="faq" class="faq">
     <div class="wrap">
       <h2>Domande frequenti</h2>
-      <details><summary>Cos'è Restrackit?</summary><p>Restrackit è un software HACCP per cucine professionali, composto da un'app Android e da una piattaforma web. Serve a registrare lotti e scadenze, stampare etichette HACCP e avere i dati pronti per un'ispezione.</p></details>
+      <details><summary>Cos'è Restrackit?</summary><p>Restrackit è un software HACCP per cucine professionali, composto da un'app Android per tablet e da una piattaforma web. Serve a registrare lotti e scadenze, stampare etichette HACCP e avere i dati pronti per un'ispezione.</p></details>
       <details><summary>Funziona per chi gestisce più locali?</summary><p>Sì. Ogni locale ha i propri dati, separati dagli altri, e dall'app si passa da un locale all'altro con un selettore.</p></details>
-      <details><summary>Su quali dispositivi funziona?</summary><p>Su smartphone e tablet Android e da browser. In cucina si usa l'app; i controlli si possono fare anche dalla piattaforma web.</p></details>
+      <details><summary>Su quali dispositivi funziona?</summary><p>Su tablet Android: l'app è pensata per il tablet della cucina, usato in orizzontale. Funziona anche su smartphone Android, e i controlli si possono fare dalla piattaforma web.</p></details>
       <details><summary>Come funziona la lettura delle etichette con l'AI?</summary><p>Si inquadra l'etichetta del fornitore e l'app propone prodotto, lotto e scadenza. L'operatore controlla e conferma: nessun dato viene salvato senza conferma.</p></details>
       <details><summary>Serve una stampante?</summary><p>Serve solo per stampare le etichette HACCP. Durante il pilota la stampante è fornita in comodato d'uso.</p></details>
       <details><summary>A cosa servono i badge NFC?</summary><p>Sul tablet condiviso della cucina ogni operatore passa al proprio profilo avvicinando il badge, oppure con un PIN. Così ogni registrazione è attribuita a chi l'ha fatta, senza digitare password in servizio.</p></details>

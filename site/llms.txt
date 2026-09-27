@@ -1,6 +1,6 @@
 # Restrackit
 
-> Restrackit è un software HACCP per cucine professionali in Italia: app Android e piattaforma web per registrare lotti e scadenze, stampare etichette HACCP e produrre il report PDF per l'ispezione, anche per chi gestisce più locali.
+> Restrackit è un software HACCP per cucine professionali in Italia: app Android pensata per il tablet della cucina (funziona anche su smartphone) e piattaforma web per registrare lotti e scadenze, stampare etichette HACCP e produrre il report PDF per l'ispezione, anche per chi gestisce più locali.
 
 ## Cosa fa
 - Registrazione di lotti e scadenze in 1-2 tap.

@@ -48,7 +48,7 @@ h3 { font-size: 1.2rem; font-weight: 600; }
 p { margin: 0 0 1em; max-width: 65ch; }
 
 .wrap { width: min(1160px, 100% - 32px); margin-inline: auto; }
-section { padding-block: clamp(56px, 8vw, 96px); }
+section { padding-block: clamp(48px, 7vw, 88px); }
 .muted { color: var(--muted); }
 
 /* Bottoni: rame + inchiostro (contrasto AA), target >= 48px */
@@ -78,14 +78,14 @@ section { padding-block: clamp(56px, 8vw, 96px); }
 @media (max-width: 420px) { .site-header .btn { display: none; } }
 
 /* Hero */
-.hero { padding-top: clamp(40px, 6vw, 80px); }
-.hero .wrap { display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(32px, 5vw, 64px); align-items: center; }
-.hero .lead { font-size: 1.2rem; color: var(--muted); }
-.hero .pilot-note { font-weight: 600; }
+.hero { padding-top: clamp(40px, 6vw, 72px); }
+.hero .wrap { display: grid; gap: clamp(32px, 5vw, 56px); }
+.hero h1 { font-size: clamp(2rem, 4vw, 3.1rem); text-wrap: balance; max-width: 26ch; }
+.hero .lead { font-size: 1.2rem; color: var(--muted); margin-bottom: .5em; }
+.hero .pilot-note { font-weight: 600; margin-bottom: 1.5em; }
 .hero figure { margin: 0; }
-.shot { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: #fff; box-shadow: 0 18px 50px -24px rgb(30 27 23 / .35); }
+.shot { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: #fff; box-shadow: 0 24px 60px -32px rgb(30 27 23 / .4); }
 figcaption { font-size: .9rem; color: var(--muted); margin-top: 10px; }
-@media (max-width: 900px) { .hero .wrap { grid-template-columns: 1fr; } }
 
 /* Problema */
 .problem-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; margin-top: 32px; }
@@ -97,10 +97,15 @@ figcaption { font-size: .9rem; color: var(--muted); margin-top: 10px; }
 @media (max-width: 800px) { .problem-grid { grid-template-columns: 1fr; } }
 
 /* Come funziona */
-.steps { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 4vw, 48px); margin-top: 40px; }
-.step-wide { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 4vw, 48px); align-items: center; }
+.steps { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 4vw, 48px); margin-top: 40px; }
+.step-lead { grid-column: 1 / -1; display: grid; grid-template-columns: 2fr 1fr; gap: clamp(24px, 4vw, 48px); align-items: center; }
 .step h3 { margin-top: 24px; }
-@media (max-width: 800px) { .steps, .step-wide { grid-template-columns: 1fr; } }
+.step-lead h3 { margin-top: 0; }
+/* Cornice tablet (orizzontale, 16:10): l'app e' pensata per il tablet della cucina */
+.tablet { border: clamp(8px, 1.2vw, 14px) solid #1E1B17; border-radius: clamp(16px, 2vw, 26px); overflow: hidden; box-shadow: 0 24px 60px -32px rgb(30 27 23 / .45); }
+.tablet > * { aspect-ratio: 16 / 10; width: 100%; border-radius: 0; }
+@media (prefers-color-scheme: dark) { .tablet { border-color: #3A3631; } }
+@media (max-width: 800px) { .steps, .step-lead { grid-template-columns: 1fr; } }
 
 /* Anteprima scheda lotto e etichetta: dati reali del dataset demo */
 .card-preview { background: var(--surface); border-radius: var(--radius); padding: 24px; min-height: 260px; display: grid; place-items: center; }
@@ -113,8 +118,8 @@ figcaption { font-size: .9rem; color: var(--muted); margin-top: 10px; }
 .label b { display: block; font-size: 1.15rem; text-transform: uppercase; letter-spacing: .02em; }
 .label .row { display: flex; justify-content: space-between; gap: 12px; border-top: 1px solid #1E1B17; margin-top: 8px; padding-top: 8px; }
 
-.status { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-.status li { display: flex; justify-content: space-between; gap: 16px; background: var(--surface); border-radius: var(--radius); padding: 14px 18px; }
+.status { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; width: min(360px, 100%); }
+.status li { display: flex; justify-content: space-between; gap: 16px; background: var(--bg); border-radius: var(--radius); padding: 14px 18px; }
 .tag { font-weight: 600; white-space: nowrap; }
 .tag::before { margin-right: 6px; }
 .tag.bad { color: var(--bad); } .tag.bad::before { content: "\2715"; }
@@ -137,7 +142,9 @@ figcaption { font-size: .9rem; color: var(--muted); margin-top: 10px; }
 @media (max-width: 800px) { .pilot-cols { grid-template-columns: 1fr; } }
 
 /* Chi c'e' dietro */
-.about .wrap { max-width: 760px; }
+.about .wrap { display: grid; grid-template-columns: 1fr 2fr; gap: clamp(16px, 4vw, 48px); align-items: baseline; }
+.about p { margin: 0; font-size: 1.15rem; }
+@media (max-width: 800px) { .about .wrap { grid-template-columns: 1fr; } }
 
 /* FAQ */
 .faq details { border-bottom: 1px solid var(--border); }
