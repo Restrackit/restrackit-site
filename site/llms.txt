@@ -1,0 +1,32 @@
+# Restrackit
+
+> Restrackit è un software HACCP per cucine professionali in Italia: app Android e piattaforma web per registrare lotti e scadenze, stampare etichette HACCP e produrre il report PDF per l'ispezione, anche per chi gestisce più locali.
+
+## Cosa fa
+- Registrazione di lotti e scadenze in 1-2 tap.
+- Lettura delle etichette dei fornitori con AI: l'app propone prodotto, lotto e scadenza, l'operatore conferma.
+- Preparazioni con registrazione dei lotti usati e calcolo automatico del TMC (termine minimo di conservazione).
+- Stampa di etichette HACCP.
+- Badge NFC (o PIN) per cambiare operatore sul tablet condiviso: ogni registrazione è attribuita a chi l'ha fatta.
+- Notifiche prima della scadenza dei lotti.
+- Report PDF per l'ispezione: lotti in giacenza con scadenza, TMC, allergeni e movimenti; preparazioni con i lotti usati.
+- Più locali con dati separati e selettore dei locali.
+
+## Definizioni
+- HACCP: sistema di autocontrollo igienico obbligatorio per le attività alimentari (Reg. CE 852/2004).
+- Tracciabilità: capacità di sapere, per ogni lotto, da quale fornitore arriva e in quale preparazione è finito (Reg. CE 178/2002).
+- TMC: termine minimo di conservazione, la data entro cui un prodotto conserva le sue proprietà.
+
+## Per chi
+Catene e franchising, mense e catering, bar e punti ristoro (anche nelle aree di servizio), ristoranti, responsabili HACCP.
+
+## Offerta
+Programma cucine pilota: 5 posti, un mese gratuito senza rinnovo automatico, stampante in comodato, attivazione e formazione incluse. Dopo il pilota: canone annuale per locale, definito in base al numero di locali.
+
+## Pagine
+- [Home: prodotto, programma pilota e FAQ](https://restrackit.it/): descrizione completa e domande frequenti.
+- [Informativa privacy](https://restrackit.it/privacy.html): dati raccolti e diritti.
+
+## Contatti
+- Email: [info@restrackit.it](mailto:info@restrackit.it)
+- Sviluppato da Luca Bevilacqua, Emilia-Romagna.
