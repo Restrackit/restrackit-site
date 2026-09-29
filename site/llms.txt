@@ -25,11 +25,16 @@ Programma cucine pilota: 5 posti, un mese gratuito senza rinnovo automatico, sta
 
 ## Pagine
 - [Home: prodotto, programma pilota e FAQ](https://restrackit.it/): descrizione completa e domande frequenti.
-- [Tracciabilità dei lotti in cucina](https://restrackit.it/tracciabilita-lotti-ristorante.html): cosa prevede il Reg. CE 178/2002, cosa registrare per ogni lotto, come collegare lotti e preparazioni.
-- [Etichette HACCP per le preparazioni](https://restrackit.it/etichette-haccp-cucina.html): informazioni da riportare, i 14 allergeni, stampa delle etichette.
-- [TMC e data di scadenza](https://restrackit.it/tmc-e-data-di-scadenza.html): differenza tra «da consumarsi entro» e «da consumarsi preferibilmente entro» (Reg. UE 1169/2011) e date delle preparazioni interne.
-- [Ispezione HACCP: cosa farti trovare pronto](https://restrackit.it/report-ispezione-haccp.html): cosa viene richiesto di solito in un controllo e il report PDF dell'app.
-- [HACCP per catene e franchising](https://restrackit.it/haccp-catene-franchising.html): un metodo unico con dati separati per locale.
+- [Tracciabilità dei lotti in cucina: cosa devi registrare](https://restrackit.it/tracciabilita-lotti-ristorante.html): Cos'è la tracciabilità in una cucina professionale, quali dati registrare per ogni lotto e come collegare i lotti alle preparazioni.
+- [Etichette HACCP: cosa scrivere sulle preparazioni in cucina](https://restrackit.it/etichette-haccp-cucina.html): Le informazioni da mettere sull'etichetta di una preparazione interna: data, scadenza o TMC, lotto, allergeni. E come evitare gli errori a mano.
+- [TMC e data di scadenza: che differenza c'è](https://restrackit.it/tmc-e-data-di-scadenza.html): La differenza tra «da consumarsi entro» e «da consumarsi preferibilmente entro» (TMC), e come gestire le date delle preparazioni in cucina.
+- [Ispezione HACCP: cosa farti trovare pronto](https://restrackit.it/report-ispezione-haccp.html): Cosa può chiedere un ispettore su lotti, scadenze e allergeni, e come avere un report PDF in pochi secondi dall'app.
+- [HACCP per catene e franchising: un metodo unico in ogni locale](https://restrackit.it/haccp-catene-franchising.html): Come avere lo stesso metodo di registrazione di lotti, scadenze ed etichette in tutti i locali, con dati separati per punto vendita.
+- [HACCP per mense e catering: molte preparazioni, ognuna tracciata](https://restrackit.it/haccp-mense-catering.html): Come gestire lotti, TMC ed etichette quando le preparazioni al giorno sono decine: cosa registrare e come non perdere il filo.
+- [HACCP per bar e punti ristoro: scadenze e allergeni sotto controllo](https://restrackit.it/haccp-bar-punti-ristoro.html): Lotti, scadenze e allergeni in un bar o in un punto ristoro: cosa tenere sotto controllo e come farlo senza rallentare il servizio.
+- [Allergeni in ristorazione: cosa devi sapere e come tenerli sotto controllo](https://restrackit.it/allergeni-ristorazione.html): I 14 allergeni del Reg. UE 1169/2011, l'informazione al cliente per i piatti non preimballati e come non perderli di vista in cucina.
+- [FIFO e FEFO in cucina: usare prima ciò che scade prima](https://restrackit.it/fifo-fefo-gestione-scorte.html): La differenza tra FIFO e FEFO, quale usare in una cucina professionale e come non trovarsi lotti scaduti in frigo.
+- [Registro dei lotti: carta o digitale?](https://restrackit.it/registro-lotti-carta-o-digitale.html): Vantaggi e limiti del registro di carta e di quello digitale per lotti e scadenze in una cucina professionale, senza giri di parole.
 - [Informativa privacy](https://restrackit.it/privacy.html): dati raccolti e diritti.
 
 ## Contatti
