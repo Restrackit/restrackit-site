@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Software HACCP per ristoranti e catene | Restrackit</title>
-<meta name="description" content="Restrackit è il software HACCP per cucine professionali: lotti, scadenze ed etichette in 1-2 tap e report PDF per l'ispezione. Cerchiamo 5 cucine pilota.">
+<meta name="description" content="Restrackit è il software HACCP per cucine professionali: etichette, lotti e scadenze in 1-2 tap e report PDF per l'ispezione. Cerchiamo 5 cucine pilota.">
 <link rel="canonical" href="https://restrackit.it/">
 <meta name="theme-color" content="#FBFAF7">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Restrackit">
 <meta property="og:url" content="https://restrackit.it/">
 <meta property="og:title" content="Restrackit, software HACCP per cucine professionali">
-<meta property="og:description" content="Lotti, scadenze ed etichette in 1-2 tap, anche su più locali. Cerchiamo 5 cucine pilota: un mese gratis.">
+<meta property="og:description" content="Etichette, lotti e scadenze in 1-2 tap, anche su più locali. Cerchiamo 5 cucine pilota: un mese gratis.">
 <meta property="og:image" content="https://restrackit.it/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -86,8 +86,8 @@
   <section class="hero">
     <div class="wrap">
       <div class="hero-copy">
-        <h1>Software HACCP per cucine professionali, veloce quanto il servizio</h1>
-        <p class="lead">Lotti, scadenze ed etichette in 1-2 tap, dal tablet della cucina. Ogni locale con i propri dati, tutti nella stessa app.</p>
+        <h1>Software HACCP per cucine professionali, <mark>veloce quanto il servizio</mark></h1>
+        <p class="lead">Etichette, lotti e scadenze in 1-2 tap, dal tablet della cucina. Ogni locale con i propri dati, tutti nella stessa app.</p>
         <p class="pilot-note">Stiamo selezionando 5 cucine pilota: un mese gratis, stampante e formazione incluse.</p>
         <div class="actions">
           <a class="btn btn-primary" href="https://forms.gle/BkNGwGhaoGwES6xX8" target="_blank" rel="noopener">Candidati al pilota</a>
@@ -135,20 +135,9 @@
       <p class="muted">Il percorso di un lotto, dall'arrivo della merce all'ispezione.</p>
       <div class="steps">
         <div class="step step-lead">
-          <!-- TODO: screenshot reale dal tablet in orizzontale (nuovo lotto o revisione dopo la lettura dell'etichetta),
-               PNG 16:10, es. 2560x1600. Sostituire il div .card-preview con:
-               <img src="/img/passo-lotto-1160.webp" srcset="..." width="2560" height="1600" loading="lazy" alt="..."> -->
           <div class="tablet">
-            <div class="card-preview" role="img" aria-label="Esempio di scheda lotto: panna fresca, lotto LOT-20260927-PANNA-FRES-011, scadenza 28/09/2026, allergeni latte.">
-              <div class="lot">
-                <h3 class="m0">panna fresca</h3>
-                <dl>
-                  <dt>Lotto</dt><dd>LOT-20260927-PANNA-FRES-011</dd>
-                  <dt>Scadenza</dt><dd>28/09/2026</dd>
-                  <dt>Allergeni</dt><dd>latte</dd>
-                </dl>
-              </div>
-            </div>
+            <img src="/img/passo-lotto-1160.webp" srcset="/img/passo-lotto-800.webp 800w, /img/passo-lotto-1160.webp 1160w, /img/passo-lotto-2360.webp 2360w" sizes="(max-width: 800px) calc(100vw - 32px), 720px" width="2360" height="1540" loading="lazy" decoding="async"
+                 alt="Schermata Dettaglio lotto dell'app su tablet: latte intero, lotto I0526/04, scadenza 14/10/2026, conservazione in frigo a +4 °C, con i pulsanti Chiudi lotto, Sposta lotto ed Elimina lotto e lo storico dei movimenti.">
           </div>
           <div>
             <h3>Registra il lotto all'arrivo</h3>
@@ -156,27 +145,15 @@
           </div>
         </div>
         <div class="step">
-          <!-- TODO: sostituire con la foto di un'etichetta HACCP stampata, es. /img/passo-etichetta.webp -->
-          <div class="card-preview" role="img" aria-label="Esempio di etichetta HACCP: pasta al salmone, preparata il 27/09/2026, TMC 28/09/2026, allergeni glutine, pesce, latte.">
-            <div class="label">
-              <b>Pasta al salmone</b>
-              Lotto PREP-20260927-32
-              <div class="row"><span>Preparato</span><span>27/09/2026</span></div>
-              <div class="row"><span>TMC</span><span>28/09/2026</span></div>
-              <div class="row"><span>Allergeni</span><span>glutine, pesce, latte</span></div>
-            </div>
-          </div>
+          <img class="crop" src="/img/passo-etichetta-696.webp" width="696" height="414" loading="lazy" decoding="async"
+               alt="Etichetta HACCP stampata dall'app: farina di riso, TMC 20/11/2026, allergeni latte e soia, senza glutine, lotto L-77, scadenza 01/12/2026, con codice QR.">
+
           <h3>Prepara ed etichetta</h3>
           <p>Per ogni preparazione l'app registra i lotti usati e calcola il TMC, il termine minimo di conservazione. L'etichetta HACCP esce dalla stampante già compilata.</p>
         </div>
         <div class="step">
-          <div class="card-preview">
-            <ul class="status">
-              <li><span>pane tostato</span><span class="tag bad">Scaduto</span></li>
-              <li><span>latte intero</span><span class="tag warn">In scadenza</span></li>
-              <li><span>farina 00</span><span class="tag ok">In regola</span></li>
-            </ul>
-          </div>
+          <img class="crop" src="/img/passo-scadenze-700.webp" srcset="/img/passo-scadenze-700.webp 700w, /img/passo-scadenze-1400.webp 1400w" sizes="(max-width: 800px) calc(100vw - 32px), 560px" width="1400" height="410" loading="lazy" decoding="async"
+               alt="Elenco dei lotti nell'app: l'insalata di pollo preparata è segnata come Scaduto, l'insalata mista e il burro come In scadenza.">
           <h3>Arriva l'ispezione? Sei già pronto.</h3>
           <p>Le notifiche ti avvisano prima che un lotto scada. Quando serve, il report PDF raccoglie lotti, scadenze, allergeni e movimenti del periodo.</p>
         </div>
@@ -283,5 +260,22 @@
     <span><a href="mailto:info@restrackit.it">info@restrackit.it</a> · <a href="/privacy.html">Privacy</a></span>
   </div>
 </footer>
+
+<dialog id="info" aria-labelledby="info-t">
+  <form method="dialog"><button class="close" aria-label="Chiudi">&times;</button></form>
+  <h3 id="info-t"></h3>
+  <p></p>
+</dialog>
+<script>
+// Le domande frequenti si aprono in un pop-up; senza JS restano <details> normali.
+const d = document.getElementById('info');
+document.querySelectorAll('.faq summary').forEach(s => s.addEventListener('click', e => {
+  e.preventDefault();
+  d.querySelector('h3').textContent = s.textContent;
+  d.querySelector('p').textContent = s.nextElementSibling.textContent;
+  d.showModal();
+}));
+d.addEventListener('click', e => { if (e.target === d) d.close(); });
+</script>
 </body>
 </html>
