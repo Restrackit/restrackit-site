@@ -39,4 +39,4 @@ Programma cucine pilota: 5 posti, un mese gratuito senza rinnovo automatico, sta
 
 ## Contatti
 - Email: [info@restrackit.it](mailto:info@restrackit.it)
-- Sviluppato da Luca Bevilacqua, Emilia-Romagna.
+- Sviluppato da Luca Bevilacqua, Emilia-Romagna: [LinkedIn](https://www.linkedin.com/in/luca-bevilacqua-00a9ab289).
