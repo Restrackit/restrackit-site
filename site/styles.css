@@ -211,6 +211,16 @@ figcaption { font: .8rem/1.4 var(--mono); color: var(--muted); margin-top: 22px;
 /* Pagine testuali (privacy, 404) */
 .doc { padding-block: 48px 80px; max-width: 760px; }
 .doc h2 { font-size: 1.35rem; margin-top: 1.6em; }
+.doc h1 { font-size: clamp(1.9rem, 4.4vw, 2.8rem); }
+.doc h3 { font-size: 1.05rem; margin-top: 1.2em; }
+.doc ul { padding-left: 1.2em; }
+.doc li { margin-bottom: .4em; }
+.doc figure { margin: 1.2em 0; }
+.doc figure img { width: 100%; height: auto; border: 1px solid var(--border); border-radius: var(--radius); }
+.crumbs { font-size: .9rem; color: var(--muted); margin-bottom: 1rem; }
+.doc .cta { margin-top: 2.4em; padding: 24px; border: 1px solid var(--ink); border-radius: var(--radius); background: var(--surface); }
+.doc .cta h2 { margin-top: 0; }
+.footer-guides { flex: 0 0 100%; display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 0; padding: 0 0 16px; list-style: none; font-size: .9rem; }
 .m0 { margin: 0; }
 .after-cta { margin-top: 16px; }
 

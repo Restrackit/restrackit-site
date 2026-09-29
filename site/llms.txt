@@ -25,6 +25,11 @@ Programma cucine pilota: 5 posti, un mese gratuito senza rinnovo automatico, sta
 
 ## Pagine
 - [Home: prodotto, programma pilota e FAQ](https://restrackit.it/): descrizione completa e domande frequenti.
+- [Tracciabilità dei lotti in cucina](https://restrackit.it/tracciabilita-lotti-ristorante.html): cosa prevede il Reg. CE 178/2002, cosa registrare per ogni lotto, come collegare lotti e preparazioni.
+- [Etichette HACCP per le preparazioni](https://restrackit.it/etichette-haccp-cucina.html): informazioni da riportare, i 14 allergeni, stampa delle etichette.
+- [TMC e data di scadenza](https://restrackit.it/tmc-e-data-di-scadenza.html): differenza tra «da consumarsi entro» e «da consumarsi preferibilmente entro» (Reg. UE 1169/2011) e date delle preparazioni interne.
+- [Ispezione HACCP: cosa farti trovare pronto](https://restrackit.it/report-ispezione-haccp.html): cosa viene richiesto di solito in un controllo e il report PDF dell'app.
+- [HACCP per catene e franchising](https://restrackit.it/haccp-catene-franchising.html): un metodo unico con dati separati per locale.
 - [Informativa privacy](https://restrackit.it/privacy.html): dati raccolti e diritti.
 
 ## Contatti
