@@ -8,8 +8,11 @@
 - Preparazioni con registrazione dei lotti usati e calcolo automatico del TMC (termine minimo di conservazione).
 - Stampa di etichette HACCP.
 - Badge NFC (o PIN) per cambiare operatore sul tablet condiviso: ogni registrazione è attribuita a chi l'ha fatta.
+- Registro delle temperature: punti di misura (frigo, cella, abbattitore), controlli a orari programmati, letture dal tablet, etichetta del punto con QR.
+- Routine di pulizia con orario limite, segnate come fatte dall'operatore.
+- Guida nell'app con tour interattivi su dati di prova.
 - Notifiche prima della scadenza dei lotti.
-- Report PDF per l'ispezione: lotti in giacenza con scadenza, TMC, allergeni e movimenti; preparazioni con i lotti usati.
+- Report PDF per l'ispezione: lotti in giacenza con scadenza, TMC, allergeni e movimenti; preparazioni con i lotti usati; letture di temperatura e pulizie eseguite.
 - Più locali con dati separati e selettore dei locali.
 
 ## Definizioni
