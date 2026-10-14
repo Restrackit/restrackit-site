@@ -93,6 +93,8 @@ main > section:not(.hero):not(.final) h2::before {
 .site-header nav a { color: var(--ink); text-decoration: none; padding-block: 12px; font-size: .95rem; font-weight: 500; border-bottom: 2px solid transparent; }
 .site-header nav a:hover { border-color: var(--copper); }
 .site-header .btn { min-height: 44px; padding: 0 18px; font-size: .95rem; }
+.site-header .login { margin-left: auto; color: var(--ink); text-decoration: none; padding-block: 12px; font-size: .95rem; font-weight: 500; border-bottom: 2px solid transparent; }
+.site-header .login:hover { border-color: var(--copper); }
 @media (max-width: 860px) { .site-header nav { display: none; } }
 @media (max-width: 420px) { .site-header .btn { display: none; } }
 
