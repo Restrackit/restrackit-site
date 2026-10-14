@@ -4,7 +4,7 @@
 
 ## Cosa fa
 - Registrazione di lotti e scadenze in 1-2 tap.
-- Lettura delle etichette dei fornitori con AI: l'app propone prodotto, lotto e scadenza, l'operatore conferma.
+- Lettura delle etichette dei fornitori da foto: l'app propone prodotto, lotto e scadenza, l'operatore conferma.
 - Lettura delle bolle dei fornitori da foto (in arrivo): l'app propone le righe, una persona conferma e nascono i lotti collegati alla bolla.
 - Preparazioni con registrazione dei lotti usati e calcolo automatico del TMC (termine minimo di conservazione).
 - Stampa di etichette HACCP.
