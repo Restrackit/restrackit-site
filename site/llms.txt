@@ -1,14 +1,15 @@
 # Restrackit
 
-> Restrackit è un software HACCP per cucine professionali in Italia: app Android pensata per il tablet della cucina (funziona anche su smartphone) e piattaforma web per registrare lotti e scadenze, stampare etichette HACCP e produrre il report PDF per l'ispezione, anche per chi gestisce più locali.
+> Restrackit è un software HACCP per cucine professionali in Italia: app per tablet (iPad e Android, funziona anche su smartphone) e piattaforma web per registrare lotti e scadenze, leggere bolle, pianificare la produzione antispreco, stampare etichette HACCP e produrre il report PDF per l'ispezione, anche per chi gestisce più locali.
 
 ## Cosa fa
 - Registrazione di lotti e scadenze in 1-2 tap.
 - Lettura delle etichette dei fornitori da foto: l'app propone prodotto, lotto e scadenza, l'operatore conferma.
-- Lettura delle bolle dei fornitori da foto (in arrivo): l'app propone le righe, una persona conferma e nascono i lotti collegati alla bolla.
+- Lettura delle bolle dei fornitori (DDT) da foto: l'app estrae intestazione e righe, abbina i prodotti al catalogo e, previa conferma dell'operatore, genera i lotti in magazzino.
+- Piano del giorno e previsioni antispreco: lotti a rischio scadenza con suggerimenti ricette e avvisi normativi HACCP (es. divieto congelamento tardivo), fabbisogno del giorno calibrato sullo storico e calcolo dello spreco evitato.
 - Preparazioni con registrazione dei lotti usati e calcolo automatico del TMC (termine minimo di conservazione).
 - Stampa di etichette HACCP.
-- Badge NFC (o PIN) per cambiare operatore sul tablet condiviso: ogni registrazione è attribuita a chi l'ha fatta.
+- Gestione collaboratori con ruoli (Chef, Manager), PIN e badge NFC per cambio operatore rapido sul tablet condiviso.
 - Registro delle temperature: punti di misura (frigo, cella, abbattitore), controlli a orari programmati, letture dal tablet, etichetta del punto con QR.
 - Routine di pulizia con orario limite, segnate come fatte dall'operatore.
 - Guida nell'app con tour interattivi su dati di prova.
