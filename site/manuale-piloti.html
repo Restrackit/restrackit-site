@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manuale Piloti — Guida Operativa per la Cucina | Restrackit</title>
+<meta name="description" content="Guida pratica all'uso di Restrackit per i locali pilota: accesso, carico lotti, piano del giorno, preparazioni, temperature e pulizie HACCP.">
+<link rel="canonical" href="https://restrackit.it/manuale-piloti.html">
+<meta name="theme-color" content="#FBFAF7">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="it_IT">
+<meta property="og:site_name" content="Restrackit">
+<meta property="og:url" content="https://restrackit.it/manuale-piloti.html">
+<meta property="og:title" content="Manuale Piloti — Guida Operativa per la Cucina | Restrackit">
+<meta property="og:description" content="Guida passo-passo per titolari, responsabili e cuochi che testano Restrackit nella propria cucina.">
+<meta property="og:image" content="https://restrackit.it/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/styles.css">
+<style>
+/* Stili specifici per il manuale */
+.doc { max-width: 820px; }
+.manual-intro { margin-bottom: 2.2rem; }
+.manual-meta-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  margin: 1.2rem 0 2rem;
+  font-size: 0.95rem;
+}
+.manual-meta-bar .badge {
+  display: inline-block;
+  padding: 3px 9px;
+  background: var(--copper);
+  color: #1E1B17;
+  font-weight: 700;
+  border-radius: var(--radius);
+  font-family: var(--mono);
+  font-size: 0.82rem;
+}
+.manual-actions { display: flex; gap: 8px; }
+.btn-sm {
+  min-height: 38px;
+  padding: 0 14px;
+  font-size: 0.88rem;
+  border-radius: var(--radius);
+}
+
+/* Indice / Sommario */
+.toc-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--copper);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin: 1.8rem 0 2.5rem;
+}
+.toc-box h3 { margin: 0 0 12px; font-size: 1.15rem; color: var(--ink); }
+.toc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 8px 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.toc-grid li { margin: 0; font-size: 0.95rem; }
+.toc-grid a { text-decoration: none; color: var(--ink); display: inline-block; padding: 2px 0; }
+.toc-grid a:hover { color: var(--copper-text); text-decoration: underline; }
+
+/* Callout / Box di evidenza */
+.callout {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin: 1.4rem 0;
+  background: var(--surface);
+}
+.callout p:last-child { margin-bottom: 0; }
+.callout-title {
+  font-weight: 700;
+  font-size: 0.98rem;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.callout.tip { border-left: 4px solid var(--ok); }
+.callout.tip .callout-title { color: var(--ok); }
+.callout.warn { border-left: 4px solid var(--warn); }
+.callout.warn .callout-title { color: var(--warn); }
+.callout.danger { border-left: 4px solid var(--bad); }
+.callout.danger .callout-title { color: var(--bad); }
+.callout.info { border-left: 4px solid var(--copper); }
+.callout.info .callout-title { color: var(--copper-text); }
+
+/* Tabelle del manuale */
+.doc-table-wrap { overflow-x: auto; margin: 1.4rem 0; }
+.doc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  text-align: left;
+}
+.doc-table th, .doc-table td {
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  vertical-align: top;
+}
+.doc-table th {
+  background: var(--surface);
+  font-family: var(--mono);
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+.doc-table tr:nth-child(even) td { background: color-mix(in srgb, var(--surface) 35%, transparent); }
+
+/* Schema flusso giornata */
+.routine-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 1.6rem 0;
+}
+.routine-card {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 16px;
+  align-items: baseline;
+}
+@media (max-width: 600px) {
+  .routine-card { grid-template-columns: 1fr; gap: 4px; }
+}
+.routine-phase {
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--copper-text);
+  text-transform: uppercase;
+}
+.routine-desc strong { color: var(--ink); }
+.routine-desc p { margin: 4px 0 0; font-size: 0.94rem; color: var(--muted); }
+
+/* Media print per generare un PDF perfetto */
+@media print {
+  body { background: #fff !important; color: #000 !important; font-size: 10.5pt; line-height: 1.45; }
+  .site-header, .site-footer, .manual-actions, .crumbs, .cta, .btn { display: none !important; }
+  .doc { max-width: 100% !important; padding: 0 !important; }
+  .toc-box { border: 1px solid #ccc !important; background: #fafafa !important; page-break-after: avoid; }
+  .callout { border: 1px solid #ccc !important; background: #fbfbfb !important; }
+  figure { page-break-inside: avoid; }
+  figure img { max-width: 85% !important; margin: 0 auto; }
+  h2 { page-break-after: avoid; margin-top: 1.8rem; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
+  h3 { page-break-after: avoid; }
+  a { text-decoration: none !important; color: #000 !important; }
+  .routine-card { border: 1px solid #ddd !important; background: #fff !important; page-break-inside: avoid; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "@id": "https://restrackit.it/manuale-piloti.html#article",
+      "headline": "Manuale Piloti — Guida Operativa per la Cucina",
+      "description": "Guida pratica per chef, cuochi e titolari dei locali pilota: accesso, carichi, preparazioni, scadenze e registri HACCP.",
+      "inLanguage": "it",
+      "datePublished": "2026-10-23",
+      "dateModified": "2026-10-23",
+      "mainEntityOfPage": "https://restrackit.it/manuale-piloti.html",
+      "author": {
+        "@type": "Person",
+        "name": "Luca Bevilacqua",
+        "sameAs": "https://www.linkedin.com/in/luca-bevilacqua-00a9ab289"
+      },
+      "publisher": {
+        "@id": "https://restrackit.it/#org"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><img class="logo" src="/img/logo.webp" width="118" height="96" alt=""> Restrackit</a>
+    <nav>
+      <a href="/#funzioni">Funzioni</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/tracciabilita-lotti-ristorante.html">Tracciabilità</a>
+      <a href="/report-ispezione-haccp.html">Ispezione HACCP</a>
+    </nav>
+    <a class="btn btn-ghost login" href="https://restrackit.it/ui/" target="_blank" rel="noopener">Accedi all'app</a>
+  </div>
+</header>
+
+<main class="wrap doc">
+  <nav class="crumbs" aria-label="Percorso"><a href="/">Restrackit</a> / Guida Operativa Piloti</nav>
+
+  <div class="manual-intro">
+    <h1>Manuale Operativo per i Locali Pilota</h1>
+    <p class="lead">Benvenuto nel programma pilota di Restrackit. Questa guida ti accompagna passo dopo passo nell'uso quotidiano della piattaforma in cucina: dal primo accesso alla gestione dei lotti, dal piano del giorno ai registri digitali delle temperature e delle pulizie.</p>
+
+    <div class="manual-meta-bar">
+      <div>
+        <span class="badge">FASE PILOTA</span>
+        <span class="muted" style="margin-left: 8px;">Versione 2.129 · Ottobre 2026</span>
+      </div>
+      <div class="manual-actions">
+        <button class="btn btn-ghost btn-sm" onclick="window.print()">🖨️ Stampa / Salva PDF</button>
+        <a class="btn btn-primary btn-sm" href="https://restrackit.it/ui/" target="_blank" rel="noopener">Apri l'app →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="toc-box">
+    <h3>Indice della Guida</h3>
+    <ul class="toc-grid">
+      <li><a href="#1-obiettivi">1. Obiettivi del Pilota</a></li>
+      <li><a href="#2-primi-passi">2. Accesso e Credenziali</a></li>
+      <li><a href="#3-staff">3. Gestione dello Staff (Manager)</a></li>
+      <li><a href="#4-routine">4. La Giornata Tipo in Cucina</a></li>
+      <li><a href="#5-carico-merci">5. Ricevimento Merci e Lotti</a></li>
+      <li><a href="#6-bolle-ddt">6. Carico Bolle e DDT</a></li>
+      <li><a href="#7-piano-giorno">7. Piano del Giorno e Forecast</a></li>
+      <li><a href="#8-cucina">8. Ricette e Preparazioni</a></li>
+      <li><a href="#9-movimentazione">9. Spostamenti e Regole HACCP</a></li>
+      <li><a href="#10-temperature">10. Registro Temperature</a></li>
+      <li><a href="#11-pulizie">11. Schede Pulizia e Sanificazione</a></li>
+      <li><a href="#12-scarico">12. Chiusura e Scarico Lotti</a></li>
+      <li><a href="#13-feedback">13. Feedback e Supporto Diretto</a></li>
+      <li><a href="#14-faq">14. Domande Frequenti (FAQ)</a></li>
+    </ul>
+  </div>
+
+  <!-- SEZIONE 1 -->
+  <h2 id="1-obiettivi">1. Obiettivi del Pilota</h2>
+  <p>Restrackit nasce per eliminare il disordine dei fogli di carta in cucina, automatizzare gli adempimenti HACCP (Reg. CE 852/2004 e 178/2002) e darti la visibilità in tempo reale su cosa scade e cosa viene consumato.</p>
+  <p>Durante la fase pilota, il nostro obiettivo è verificare insieme alla tua brigata:</p>
+  <ul>
+    <li><strong>Rapidità di registrazione</strong>: il carico di un'etichetta o di una bolla con l'intelligenza artificiale deve richiedere meno di 30 secondi;</li>
+    <li><strong>Zero burocrazia sui registri</strong>: le temperature dei frigoriferi e le spunte delle pulizie si fanno con due tocchi dal tablet o dal cellulare;</li>
+    <li><strong>Riduzione concreta degli scarti</strong>: il sistema ti segnala in anticipo cosa rischia di scadere e ti propone ricette utili per trasformarlo o metterlo in sicurezza prima che sia tardi.</li>
+  </ul>
+
+  <!-- SEZIONE 2 -->
+  <h2 id="2-primi-passi">2. Accesso e Credenziali</h2>
+  <p>Puoi accedere a Restrackit da qualsiasi dispositivo connesso a internet (tablet fissato alla parete in cucina, smartphone del cuoco, o computer del locale):</p>
+  <ul>
+    <li><strong>Indirizzo web dell'app</strong>: <a href="https://restrackit.it/ui/" target="_blank" rel="noopener">https://restrackit.it/ui/</a></li>
+    <li><strong>Formato Username</strong>: ogni username include il prefisso del tuo locale separato da un punto.  
+      <em>Esempio:</em> se il tuo locale è <code>trattoria-mario</code> e il tuo nome è <code>mario</code>, lo username di login è:  
+      <code style="font-size: 1.05rem; font-weight: bold; color: var(--copper-text);">trattoria-mario.mario</code>
+    </li>
+  </ul>
+
+  <div class="callout warn">
+    <div class="callout-title">⚠️ Primo Login e Password Temporanea</div>
+    <p>La password che ti viene consegnata all'avvio del pilota è <strong>provvisoria</strong>. Al primissimo accesso, il sistema ti chiederà obbligatoriamente di impostare una nuova password personale sicura. Conservala con cura: il login avviene tramite <strong>username</strong> (non con l'email).</p>
+  </div>
+
+  <p>I ruoli previsti dal sistema sono due:</p>
+  <div class="doc-table-wrap">
+    <table class="doc-table">
+      <thead>
+        <tr>
+          <th>Ruolo</th>
+          <th>Destinatari</th>
+          <th>Cosa può fare</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Manager</strong></td>
+          <td>Titolare, Executive Chef, Responsabile</td>
+          <td>Tutto: crea gli account dello staff, modifica l'anagrafica prodotti e ricette, consulta statistiche economiche, gestisce carichi, preparazioni e registri.</td>
+        </tr>
+        <tr>
+          <td><strong>Chef / Operatore</strong></td>
+          <td>Cuochi, Aiuto cuochi, Personale di linea</td>
+          <td>Operatività di cucina: scansiona etichette e bolle, registra le preparazioni, inserisce letture temperature e segna le pulizie svolte.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SEZIONE 3 -->
+  <h2 id="3-staff">3. Gestione dello Staff (Riservato al Manager)</h2>
+  <p>Non serve chiedere al supporto tecnico per ogni nuovo collaboratore. Il Manager può gestire in totale autonomia la propria squadra dalla pagina <strong>Staff</strong> (<code>#/staff</code>):</p>
+
+  <figure>
+    <img src="/img/collaboratori-1400.webp" srcset="/img/collaboratori-700.webp 700w, /img/collaboratori-1400.webp 1400w" sizes="(max-width: 792px) calc(100vw - 32px), 760px" width="1400" height="700" loading="lazy" decoding="async" alt="Schermata di gestione collaboratori in Restrackit: elenco account dello store, ruoli e pulsante per aggiungere un nuovo operatore.">
+    <figcaption class="muted">Pannello Staff: visualizza i collaboratori attivi, il loro ruolo e consente di aggiungere nuovi membri.</figcaption>
+  </figure>
+
+  <h3>Come creare un account per un cuoco:</h3>
+  <ol>
+    <li>Apri il menu e clicca su <strong>Staff</strong>;</li>
+    <li>Clicca su <strong>+ Nuovo operatore</strong>;</li>
+    <li>Inserisci <strong>Nome</strong> e <strong>Cognome</strong> (serviranno per firmare automaticamente le preparazioni e le temperature nei registri HACCP);</li>
+    <li>Scegli uno <strong>Username</strong> breve (es. <code>paolo</code>: diventerà automaticamente <code>nomestore.paolo</code>) e assegna il ruolo (<code>Chef</code>);</li>
+    <li>Premi <strong>Crea</strong>: lo schermo mostrerà una <strong>password provvisoria una sola volta</strong>. Comunicala a voce al cuoco, che la cambierà al primo login.</li>
+  </ol>
+
+  <div class="callout tip">
+    <div class="callout-title">💡 Collaboratore che dimentica la password?</div>
+    <p>Dalla tabella Staff, clicca sui tre puntini accanto al nome del cuoco e seleziona <strong>Reset password</strong>. Verrà generata una nuova password temporanea da consegnargli subito.</p>
+  </div>
+
+  <!-- SEZIONE 4 -->
+  <h2 id="4-routine">4. La Giornata Tipo in Cucina</h2>
+  <p>Restrackit è studiato per inserirsi nei momenti naturali della giornata lavorativa, senza interrompere la linea:</p>
+
+  <div class="routine-steps">
+    <div class="routine-card">
+      <div class="routine-phase">01 · Mattina (Apertura)</div>
+      <div class="routine-desc">
+        <strong>Controllo Piano del Giorno e Temperature</strong>
+        <p>Un'occhiata al cruscotto per vedere cosa scade a breve e prima rilevazione rapida delle temperature di frigoriferi e celle.</p>
+      </div>
+    </div>
+    <div class="routine-card">
+      <div class="routine-phase">02 · Arrivo Merci</div>
+      <div class="routine-desc">
+        <strong>Carico Lotti da Etichetta o Bolla</strong>
+        <p>Durante lo scarico dei fornitori: una foto all'etichetta del cartone o alla bolla di consegna per caricare i lotti in inventario.</p>
+      </div>
+    </div>
+    <div class="routine-card">
+      <div class="routine-phase">03 · Preparazioni</div>
+      <div class="routine-desc">
+        <strong>Linea e Trasformazioni</strong>
+        <p>Quando prepari salse, fondi, basi o impasti, selezioni la ricetta e il sistema scarica automaticamente le materie prime più vecchie (FEFO).</p>
+      </div>
+    </div>
+    <div class="routine-card">
+      <div class="routine-phase">04 · Fine Servizio</div>
+      <div class="routine-desc">
+        <strong>Spunta Pulizie e Chiusura</strong>
+        <p>Spunta delle schede di pulizia e sanificazione eseguite e scarico rapido dei lotti terminati durante il servizio.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEZIONE 5 -->
+  <h2 id="5-carico-merci">5. Ricevimento Merci e Lotti</h2>
+  <p>Nel momento in cui la merce entra in cucina, registrarla subito garantisce che il magazzino sia sempre allineato.</p>
+
+  <figure>
+    <img src="/img/passo-lotto-1160.webp" srcset="/img/passo-lotto-800.webp 800w, /img/passo-lotto-1160.webp 1160w" sizes="(max-width: 792px) calc(100vw - 32px), 760px" width="1160" height="580" loading="lazy" decoding="async" alt="Schermata Inventario Lotti con dettaglio prodotto, quantità, data di scadenza e stato.">
+    <figcaption class="muted">Lista dei lotti in inventario: stato di conservazione, data di scadenza e operatore che ha registrato il carico.</figcaption>
+  </figure>
+
+  <h3>Carico rapido con foto dell'etichetta (AI / OCR):</h3>
+  <ol>
+    <li>Apri <strong>Inventario</strong> e tocca <strong>Analisi OCR</strong> (oppure il pulsante rapido <strong>+ Carica lotto</strong>);</li>
+    <li>Scatta la foto dell'etichetta del produttore con la fotocamera del tablet o dello smartphone;</li>
+    <li>Premi <strong>Analizza</strong>: in 2-3 secondi l'intelligenza artificiale estrae <em>Nome Prodotto</em>, <em>Lotto</em>, <em>Data di Scadenza</em> e <em>Metodo di conservazione consigliato</em>;</li>
+    <li>Verifica i dati a video: se necessario puoi correggere qualsiasi valore o modificare la quantità ricevuta;</li>
+    <li>Premi <strong>Conferma lotto</strong>.</li>
+  </ol>
+
+  <div class="callout tip">
+    <div class="callout-title">💡 Come scattare una foto efficace</div>
+    <p>Assicurati che la data di scadenza e la sigla del lotto non siano tagliate e non abbiano riflessi di luce diretta della lampada. Se l'etichetta è umida o molto rovinata, puoi usare in qualsiasi momento l'<strong>Inserimento manuale</strong> senza foto.</p>
+  </div>
+
+  <!-- SEZIONE 6 -->
+  <h2 id="6-bolle-ddt">6. Carico Bolle e DDT</h2>
+  <p>Se ricevi forniture consistenti con decine di righe (carni, latticini, ortofrutta), scattare singole foto per ogni cartone può essere lungo. In questo caso puoi usare la funzione <strong>Bolla / DDT</strong>:</p>
+
+  <figure>
+    <img src="/img/bolla-righe-1400.webp" srcset="/img/bolla-righe-700.webp 700w, /img/bolla-righe-1400.webp 1400w" sizes="(max-width: 792px) calc(100vw - 32px), 760px" width="1400" height="700" loading="lazy" decoding="async" alt="Estrazione automatica delle righe di un Documento di Trasporto: quantità, prezzo unitario e abbinamento al catalogo.">
+    <figcaption class="muted">Estrazione automatica da bolla: Restrackit legge le righe fornitore e crea le bozze di carico abbinate ai tuoi prodotti.</figcaption>
+  </figure>
+
+  <ol>
+    <li>Dalla sezione <strong>Bolle / DDT</strong>, seleziona <strong>Carica bolla</strong>;</li>
+    <li>Scatta le foto delle pagine della bolla di consegna (fino a 6 pagine nitide);</li>
+    <li>Il sistema analizza il documento in background e prepara una bozza con le righe fornitore già abbinate ai prodotti del tuo catalogo;</li>
+    <li>Controlla la schermata di riepilogo e premi <strong>Conferma tutto</strong> per generare tutti i lotti in magazzino in un colpo solo.</li>
+  </ol>
+
+  <!-- SEZIONE 7 -->
+  <h2 id="7-piano-giorno">7. Piano del Giorno e Scadenze a Rischio (Forecast)</h2>
+  <p>La schermata <strong>Piano del giorno</strong> è pensata per il momento del briefing mattutino tra chef e capopartita.</p>
+
+  <figure>
+    <img src="/img/piano-giorno-1400.webp" srcset="/img/piano-giorno-700.webp 700w, /img/piano-giorno-1400.webp 1400w" sizes="(max-width: 792px) calc(100vw - 32px), 760px" width="1400" height="700" loading="lazy" decoding="async" alt="Piano del Giorno con elenco dei lotti a rischio scadenza e stima dei consumi previsti.">
+    <figcaption class="muted">Piano del Giorno: segnalazione proattiva dei lotti a rischio scadenza e suggerimenti pratici di ricetta.</figcaption>
+  </figure>
+
+  <p>Il sistema calcola la media di consumo delle ultime 8 settimane escludendo i giorni di chiusura del locale. In base a questo ritmo, individua i lotti che <em>non riusciresti a consumare prima della scadenza</em>.</p>
+
+  <h3>Cosa ti suggerisce Restrackit:</h3>
+  <ul>
+    <li><strong>Ricetta consigliata</strong>: ti suggerisce in quale lavorazione inserire il prodotto (es. <em>«Hai 3 kg di ricotta in scadenza dopodomani: usala per preparare 'Ravioli ricotta e spinaci'»</em>);</li>
+    <li><strong>Spostamento di conservazione</strong>: ti avvisa se un prodotto fresco può essere abbattuto e trasferito a -18°C prima della data limite.</li>
+  </ul>
+
+  <!-- SEZIONE 8 -->
+  <h2 id="8-cucina">8. Ricette e Preparazioni</h2>
+  <p>Ogni volta che trasformi materie prime in semilavorati o basi (sughi, impasti, carni marinate, verdure cotte), la preparazione deve essere registrata:</p>
+  <ol>
+    <li>Vai nella scheda <strong>Cucina</strong> e tocca <strong>Nuova preparazione</strong>;</li>
+    <li>Seleziona la ricetta dal menu a tendina;</li>
+    <li>Inserisci la quantità o il numero di porzioni prodotte;</li>
+    <li>Conferma: il sistema scarica automaticamente le materie prime necessarie dall'inventario seguendo la logica <strong>FEFO</strong> (prende per primi i lotti con scadenza più vicina);</li>
+    <li>Viene creato un nuovo lotto per la preparazione con una data di scadenza secondaria calcolata automaticamente (es. 72 ore in frigo).</li>
+  </ol>
+
+  <!-- SEZIONE 9 -->
+  <h2 id="9-movimentazione">9. Spostamenti e Regole HACCP</h2>
+  <p>Se sposti un ingrediente da un metodo di conservazione a un altro (es. da <em>Frigo +4°C</em> a <em>Freezer -18°C</em> tramite abbattitore):</p>
+  <ol>
+    <li>Nella lista <strong>Lotti</strong>, individua il prodotto e tocca <strong>Sposta</strong>;</li>
+    <li>Seleziona la nuova destinazione (es. <em>Congelatore</em>);</li>
+    <li>La data di scadenza viene ricalcolata in automatico in base alle regole di shelf-life configurate.</li>
+  </ol>
+
+  <div class="callout danger">
+    <div class="callout-title">🛑 Vincoli di Sicurezza Alimentare Rispettati dal Sistema</div>
+    <p>Per proteggerti da contestazioni durante i controlli sanitari, Restrackit blocca sul nascere le operazioni vietate dalla normativa:</p>
+    <ul style="margin-top: 8px;">
+      <li><strong>Divieto di ricongelamento a crudo</strong>: se un lotto è stato scongelato, non può essere ricongelato crudo;</li>
+      <li><strong>Divieto di congelamento tardivo</strong>: un lotto che scade oggi o già scaduto non può essere spostato in freezer per prolungarne fittiziamente la data;</li>
+      <li><strong>Blocco lotti scaduti</strong>: un lotto con data superata non può essere selezionato per nuove preparazioni e va smaltito.</li>
+    </ul>
+  </div>
+
+  <!-- SEZIONE 10 -->
+  <h2 id="10-temperature">10. Registro Temperature</h2>
+  <p>Dimentica le tabelle di carta appese ai frigoriferi. Con Restrackit la registrazione rispetta l'art. 5 del Reg. CE 852/2004 con timestamp del server e firma dell'operatore:</p>
+
+  <figure>
+    <img src="/img/temperature-da-fare-1400.webp" srcset="/img/temperature-da-fare-700.webp 700w, /img/temperature-da-fare-1400.webp 1400w" sizes="(max-width: 792px) calc(100vw - 32px), 760px" width="1400" height="700" loading="lazy" decoding="async" alt="Registro temperature HACCP con elenco dei punti di conservazione e stato delle letture giornaliere.">
+    <figcaption class="muted">Registro Temperature: visualizza con un colore immediato i punti controllati e quelli ancora da rilevare.</figcaption>
+  </figure>
+
+  <ol>
+    <li>Apri la sezione <strong>Temperature</strong> dal menu;</li>
+    <li>Vedi tutti i punti del tuo locale (es. <em>Frigo carne</em>, <em>Frigo pesce</em>, <em>Cella latticini</em>, <em>Freezer</em>);</li>
+    <li>Tocca il punto desiderato e digita i gradi letti sul display o sul termometro (es. <code>3.5</code>);</li>
+    <li>Se il valore è compreso tra il minimo e il massimo previsto, premi <strong>Salva</strong> (esito verde).</li>
+  </ol>
+
+  <div class="callout warn">
+    <div class="callout-title">⚠️ Cosa succede se la temperatura è fuori soglia?</div>
+    <p>Se un frigorifero è impostato per stare tra 0°C e +4°C e inserisci ad esempio <strong>+8.5°C</strong>, il sistema segnala l'allarme e <strong>ti chiede obbligatoriamente di scrivere l'azione correttiva</strong> intrapresa (es. <em>«Porta rimasta socchiusa durante lo scarico; richiusa e verificato abbassamento temperatura dopo 30 min»</em> oppure <em>«Guasto compressore: merce trasferita nel frigo di riserva e chiamato tecnico»</em>). Senza spiegazione, il sistema non permette di chiudere la rilevazione anomala.</p>
+  </div>
+
+  <!-- SEZIONE 11 -->
+  <h2 id="11-pulizie">11. Schede Pulizia e Sanificazione</h2>
+  <p>Nella sezione <strong>Pulizie</strong> trovi il piano di sanificazione periodico impostato per il locale:</p>
+
+  <figure>
+    <img src="/img/pulizie-oggi-1400.webp" srcset="/img/pulizie-oggi-700.webp 700w, /img/pulizie-oggi-1400.webp 1400w" sizes="(max-width: 792px) calc(100vw - 32px), 760px" width="1400" height="700" loading="lazy" decoding="async" alt="Elenco delle pulizie e sanificazioni giornaliere con spunta di completamento.">
+    <figcaption class="muted">Schede Sanificazione: compiti giornalieri e settimanali con data limite e firma operatore.</figcaption>
+  </figure>
+
+  <ul>
+    <li>Ogni compito indica l'orario entro cui deve essere svolto (es. <em>«Sanificazione affettatrice fine turno pranzo»</em>);</li>
+    <li>Quando hai terminato, premi <strong>Completa</strong>;</li>
+    <li>Se la procedura interna lo richiede, puoi scattare una foto di verifica direttamente dal telefono;</li>
+    <li>Se un compito non viene completato entro la scadenza, il sistema invia un avviso e lo segna come tardivo.</li>
+  </ul>
+
+  <!-- SEZIONE 12 -->
+  <h2 id="12-scarico">12. Chiusura e Scarico Lotti</h2>
+  <p>Quando un ingrediente o un contenitore termina, non lasciarlo a sistema:</p>
+  <ol>
+    <li>Vai su <strong>Inventario</strong> -> <strong>Lotti</strong>;</li>
+    <li>Premi <strong>Concludi</strong> sul lotto terminato;</li>
+    <li>Indica il motivo reale:
+      <ul>
+        <li><strong>Esaurito / Venduto</strong>: se il prodotto è stato interamente consumato o venduto;</li>
+        <li><strong>Scaduto</strong>: se ha superato la data limite senza essere consumato;</li>
+        <li><strong>Avariato / Danneggiato</strong>: se è stato gettato per problemi di qualità o rottura confezione.</li>
+      </ul>
+    </li>
+  </ol>
+  <p class="muted"><em>Nota: specificare il motivo corretto non serve a punire nessuno, ma è l'unico modo con cui Restrackit può dirti a fine mese quanti euro hai risparmiato e dove intervenire per non buttare via cibo.</em></p>
+
+  <!-- SEZIONE 13 -->
+  <h2 id="13-feedback">13. Feedback e Supporto Diretto</h2>
+  <p>Durante tutto il periodo pilota hai a disposizione una linea diretta con chi sviluppa il software. Per noi non esistono «domande stupide» o dettagli irrilevanti: se un pulsante è scomodo o un testo non è chiaro, vogliamo saperlo.</p>
+
+  <div class="callout info">
+    <div class="callout-title">💬 Canali di Contatto Dedicati ai Piloti</div>
+    <p><strong>Gruppo WhatsApp / Telegram Piloti</strong>: usa il gruppo per messaggi vocali, foto di etichette problematiche o dubbi veloci.<br>
+    <strong>Email di supporto</strong>: <a href="mailto:info@restrackit.it">info@restrackit.it</a><br>
+    <strong>Telefono diretto referente</strong>: fai riferimento al contatto telefonico concordato durante l'onboarding.</p>
+  </div>
+
+  <h3>Cosa fare se compare un messaggio di errore:</h3>
+  <ol>
+    <li>Fai uno <strong>screenshot</strong> della schermata;</li>
+    <li>Se compare una scritta con un codice tipo <code>BUS_BATCH_EXPIRED</code> o un <code>Request ID</code>, annotalo o includilo nello screenshot;</li>
+    <li>Invia l'immagine nella chat con due righe su cosa stavi facendo: lo risolveremo tempestivamente.</li>
+  </ol>
+
+  <!-- SEZIONE 14 -->
+  <h2 id="14-faq">14. Domande Frequenti (FAQ)</h2>
+
+  <h3>Cosa faccio se l'AI sbaglia a leggere la scadenza di un'etichetta?</h3>
+  <p>L'intelligenza artificiale propone una bozza, ma il controllo finale spetta sempre alla brigata. Tocca la casella della data, seleziona quella corretta dal calendario e premi <em>Conferma lotto</em>. Ogni correzione aiuta inoltre il sistema a migliorare.</p>
+
+  <h3>Posso usare Restrackit su più telefoni o tablet contemporaneamente?</h3>
+  <p>Sì, senza alcun limite. Più cuochi possono essere collegati contemporaneamente ognuno con il proprio account personale, sia da tablet in cucina che da cellulare.</p>
+
+  <h3>Cosa mostro se entra un ispettore ASL o NAS per un controllo?</h3>
+  <p>Dall'app puoi aprire la schermata <strong>Report Ispezione</strong> e mostrare a video o esportare in PDF l'elenco esatto delle merci in giacenza con lotti, fornitori, allergeni, lo storico delle temperature e delle sanificazioni certificate con data, ora e nome dell'operatore.</p>
+
+  <h3>Se manca temporaneamente la connessione internet?</h3>
+  <p>I dati risiedono in cloud sicuro. Se il Wi-Fi del locale ha un'interruzione momentanea, è sufficiente passare alla connessione dati del telefono o attendere il ritorno della linea per confermare l'operazione in corso.</p>
+
+  <div class="cta">
+    <h2>Sei pronto per iniziare?</h2>
+    <p>Apri l'app con le credenziali fornite per il tuo locale, imposta la tua password e prova subito a caricare il tuo primo lotto di prova.</p>
+    <p><a class="btn btn-primary" href="https://restrackit.it/ui/" target="_blank" rel="noopener">Accedi a Restrackit →</a> <button class="btn btn-ghost" onclick="window.print()">Stampa questa guida</button></p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Restrackit, Luca Bevilacqua · <a href="https://www.linkedin.com/in/luca-bevilacqua-00a9ab289" rel="me noopener" target="_blank">LinkedIn</a></span>
+    <span><a href="mailto:info@restrackit.it">info@restrackit.it</a> · <a href="/privacy.html">Privacy</a> · <a href="/manuale-piloti.html">Manuale Piloti</a></span>
+  </div>
+</footer>
+</body>
+</html>
